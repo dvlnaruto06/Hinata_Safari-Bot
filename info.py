@@ -50,8 +50,8 @@ OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "dvl_naruto_06") # widout 👉 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002153653982 -1002627121670').split()]
 # post channel auto post new movie
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002655119999').split(','))))
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002282783745 -1002393557941 -1002594005991'))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002282783745 -1002594005991 -1002594005991'))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002282783745'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002282783745'))
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
