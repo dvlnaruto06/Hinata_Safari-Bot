@@ -219,10 +219,15 @@ async def start(client, message):
                     logger.error("Make sure Bot is admin in Forcesub channel")
                     return
                 btn = [[
-                    InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɴᴏᴡ ⛔️", url=invite_link.invite_link)
-                ]]
-                if message.command[1] != "subscribe":
-                    if data.startswith("allfiles"):
+               
+
+InlineKeyboardButton("Cʜᴀɴɴᴇʟ 1", url=f'https://t.me/+Z2lvJ3Je7OM5MjI1'),
+
+
+InlineKeyboardButton("Cʜᴀɴɴᴇʟ 2", url="https://t.me/moviehub4u_06"),
+
+InlineKeyboardButton("Cʜᴀɴɴᴇʟ 3", url=invite_link.invite_link)
+              ]]
                         btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start=allfiles_{grp_id}_{file_id}")])
                     else:
                         btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start=files_{grp_id}_{file_id}")])
