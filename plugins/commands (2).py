@@ -58,19 +58,19 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, temp.B_NAME))
         if len(message.command) != 2:
             buttons = [[
-                        InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('★ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ★', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                     ],[
-                        InlineKeyboardButton('✪ ᴜᴘᴅᴀᴛᴇꜱ ✪', callback_data='channels'), 
-                        InlineKeyboardButton('⚔️ғᴇᴀᴛᴜʀᴇs ⚔️', callback_data='features')
+                        InlineKeyboardButton('❤️‍🔥 ᴜᴘᴅᴀᴛᴇꜱ ❤️‍🔥', callback_data='channels'), 
+                        InlineKeyboardButton('🔥 ғᴇᴀᴛᴜʀᴇs 🔥', callback_data='features')
                     ],[
-                        InlineKeyboardButton('🍀 Hᴇʟᴘ 🍀', callback_data='help'),
-                        InlineKeyboardButton('🤖 ᴀʙᴏᴜᴛ 🤖', callback_data='about')
+                        InlineKeyboardButton('😻 Hᴇʟᴘ 😻', callback_data='help'),
+                        InlineKeyboardButton('🙋 ᴀʙᴏᴜᴛ 🙋', callback_data='about')
                     ],[
-                        InlineKeyboardButton('🆓 ᴘʀᴇᴍɪᴜᴍ', callback_data="pm_reff"), 
-                        InlineKeyboardButton('✨ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ✨', callback_data="premium_info")
+                        InlineKeyboardButton('🌟 ᴘʀᴇᴍɪᴜᴍ 🌟', callback_data="pm_reff"), 
+                        InlineKeyboardButton('💳 ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ 💳', callback_data="premium_info")
                     ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            m=await message.reply_sticker("CAACAgQAAxkBAAEKeqNlIpmeUoOEsEWOWEiPxPi3hH5q-QACbg8AAuHqsVDaMQeY6CcRojAE") 
+            m=await message.reply_sticker("CAACAgIAAxUAAWgaVtgYzbDNdMGGkSHD682L3Y98AAItEQACki4pSoxyP98-q3UaNgQ") 
             await asyncio.sleep(2)
             await m.delete()
             await message.reply_photo(
@@ -83,19 +83,19 @@ async def start(client, message):
             return
         if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
             buttons = [[
-                        InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('★ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ★', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                     ],[
-                        InlineKeyboardButton('✪ ᴜᴘᴅᴀᴛᴇꜱ ✪', callback_data='channels'), 
-                        InlineKeyboardButton('⚔️ ғᴇᴀᴛᴜʀᴇs ⚔️', callback_data='features')
+                        InlineKeyboardButton('❤️‍🔥 ᴜᴘᴅᴀᴛᴇꜱ ❤️‍🔥', callback_data='channels'), 
+                        InlineKeyboardButton('🔥 ғᴇᴀᴛᴜʀᴇs 🔥', callback_data='features')
                     ],[
-                        InlineKeyboardButton('🍀 Hᴇʟᴘ 🍀', callback_data='help'),
-                        InlineKeyboardButton('🤖 ᴀʙᴏᴜᴛ 🤖', callback_data='about')
+                        InlineKeyboardButton('😻 Hᴇʟᴘ 😻', callback_data='help'),
+                        InlineKeyboardButton('🙋 ᴀʙᴏᴜᴛ 🙋', callback_data='about')
                     ],[
-                        InlineKeyboardButton('🆓 ᴘʀᴇᴍɪᴜᴍ', callback_data="pm_reff"), 
-                        InlineKeyboardButton('✨ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ✨', callback_data="premium_info")
+                        InlineKeyboardButton('🌟 ᴘʀᴇᴍɪᴜᴍ 🌟', callback_data="pm_reff"), 
+                        InlineKeyboardButton('💳 ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ 💳', callback_data="premium_info")
                     ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            m=await message.reply_sticker("CAACAgQAAxkBAAEKeqNlIpmeUoOEsEWOWEiPxPi3hH5q-QACbg8AAuHqsVDaMQeY6CcRojAE") 
+            m=await message.reply_sticker("CAACAgIAAxUAAWgaVtgYzbDNdMGGkSHD682L3Y98AAItEQACki4pSoxyP98-q3UaNgQ") 
             await asyncio.sleep(2)
             await m.delete()
             await message.reply_photo(
@@ -278,7 +278,7 @@ async def start(client, message):
                     ],[
                         InlineKeyboardButton("⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⁉️", url=tutorial)
                     ],[
-                        InlineKeyboardButton("✨5ᴍɪɴ Pʀᴇᴍɪᴜᴍ Tʀᴀɪʟ✨", callback_data=f'give_trial')
+                        InlineKeyboardButton("😏 5ᴍɪɴ Pʀᴇᴍɪᴜᴍ Tʀᴀɪʟ 😏", callback_data=f'give_trial')
                     ]]
                 else:
                     buttons = [[
@@ -286,7 +286,7 @@ async def start(client, message):
                     ],[
                         InlineKeyboardButton("⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⁉️", url=tutorial)
                     ],[
-                        InlineKeyboardButton("✨ ʀᴇᴍᴏᴠᴇ ᴠᴇʀɪғʏ ✨", callback_data=f'premium_info')
+                        InlineKeyboardButton("🍿😌 ʀᴇᴍᴏᴠᴇ ᴠᴇʀɪғʏ 😌🍿", callback_data=f'premium_info')
                     ]]
                 reply_markup=InlineKeyboardMarkup(buttons) 
                 if await db.user_verified(user_id): 
@@ -319,34 +319,34 @@ async def start(client, message):
                     file_size = get_size(files1.file_size),
                     file_caption=files1.caption
                 )
-                # if not await db.has_premium_access(message.from_user.id):
-                #     limit = settings.get("all_limit", SEND_ALL_LIMITE)
-                #     if settings.get("filelock", LIMIT_MODE):
-                #         await db.update_files(message.from_user.id, "send_all", send_count + 1)
-                #         files_count=await db.files_count(message.from_user.id, "send_all")
-                #         f_caption += f"<b>\n\nAʟʟ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/{limit}</b>"
-                #         if send_count is not None and send_count >= limit:
-                #             buttons = [[
-                #                        InlineKeyboardButton('✨ Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ ✨', callback_data=f'premium_info')
-                #                       ]]
-                #             reply_markup = InlineKeyboardMarkup(buttons)
-                #             return await message.reply_text(script.BUTTON_LIMIT, 
-                #             reply_markup=reply_markup)
-                # button = [[
-                #     InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}#{grp_id}")
-                #     ]]
-                # reply_markup=InlineKeyboardMarkup(button)
-                # msg = await client.send_cached_media(
-                #     chat_id=message.from_user.id,
-                #     file_id=file_id,
-                #     caption=f_caption,
-                #     protect_content=True if pre == 'filep' else False,
-                #     reply_markup=reply_markup
-                # )
-                # filesarr.append(msg)
+                 if not await db.has_premium_access(message.from_user.id):
+                     limit = settings.get("all_limit", SEND_ALL_LIMITE)
+                     if settings.get("filelock", LIMIT_MODE):
+                         await db.update_files(message.from_user.id, "send_all", send_count + 1)
+                         files_count=await db.files_count(message.from_user.id, "send_all")
+                         f_caption += f"<b>\n\nAʟʟ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/{limit}</b>"
+                         if send_count is not None and send_count >= limit:
+                             buttons = [[
+                                        InlineKeyboardButton('🥺 Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🥺', callback_data=f'premium_info')
+                                       ]]
+                             reply_markup = InlineKeyboardMarkup(buttons)
+                             return await message.reply_text(script.BUTTON_LIMIT, 
+                             reply_markup=reply_markup)
+                 button = [[
+                     InlineKeyboardButton("😌 ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ ❤️‍🔥", callback_data=f"streaming#{file_id}#{grp_id}")
+                     ]]
+                 reply_markup=InlineKeyboardMarkup(button)
+                 msg = await client.send_cached_media(
+                     chat_id=message.from_user.id,
+                     file_id=file_id,
+                     caption=f_caption,
+                     protect_content=True if pre == 'filep' else False,
+                     reply_markup=reply_markup
+                 )
+               filesarr.append(msg)
             if await db.get_setting("AUTO_FILE_DELETE", default=AUTO_FILE_DELETE):
                 k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
-                await asyncio.sleep(900)
+                await asyncio.sleep(3000)
                 for x in filesarr:
                     await x.delete()
                 await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
@@ -363,13 +363,13 @@ async def start(client, message):
                         f_caption += f"<b>\n\nDᴀɪʟʏ Fɪʟᴇ Lɪᴍɪᴛ: {files_count}/{limit}</b>"      
                         if files_counts is not None and files_counts >= limit:
                             buttons = [[
-                                       InlineKeyboardButton('✨ Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ ✨', callback_data=f'premium_info')
+                                       InlineKeyboardButton('🥺 Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🥺', callback_data=f'premium_info')
                                       ]]
                             reply_markup = InlineKeyboardMarkup(buttons)
                             return await message.reply_text(script.FILE_LIMIT,
                             reply_markup=reply_markup)
                 button = [[
-                    InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}#{grp_id}")
+                    InlineKeyboardButton("😌 ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ ❤️‍🔥", callback_data=f"streaming#{file_id}#{grp_id}")
                     ]]
                 reply_markup=InlineKeyboardMarkup(button)
                 msg = await client.send_cached_media(
@@ -410,13 +410,13 @@ async def start(client, message):
                 f_caption += f"<b>\n\nDᴀɪʟʏ Fɪʟᴇ Lɪᴍɪᴛ: {files_count}/{limit}</b>"      
                 if files_counts is not None and files_counts >= limit:
                     buttons = [[
-                               InlineKeyboardButton('✨ Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ ✨', callback_data=f'premium_info')
+                               InlineKeyboardButton('🥺 Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🥺', callback_data=f'premium_info')
                               ]]
                     reply_markup = InlineKeyboardMarkup(buttons)
                     return await message.reply_text(script.FILE_LIMIT,
                     reply_markup=reply_markup)
         button = [[
-            InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}#{grp_id}")
+            InlineKeyboardButton("😌 ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ ❤️‍🔥", callback_data=f"streaming#{file_id}#{grp_id}")
             ]]
         reply_markup=InlineKeyboardMarkup(button)
         msg=await client.send_cached_media(
