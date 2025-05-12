@@ -327,13 +327,13 @@ async def start(client, message):
                         f_caption += f"<b>\n\nAʟʟ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/{limit}</b>"
                         if send_count is not None and send_count >= limit:
                             buttons = [[
-                                       InlineKeyboardButton('✨ Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ ✨', callback_data=f'premium_info')
+                                       InlineKeyboardButton('🥺 Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🥺', callback_data=f'premium_info')
                                       ]]
                             reply_markup = InlineKeyboardMarkup(buttons)
                             return await message.reply_text(script.BUTTON_LIMIT, 
                             reply_markup=reply_markup)
                 button = [[
-                    InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}#{grp_id}")
+                    InlineKeyboardButton("😌 ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ ❤️‍🔥", callback_data=f"streaming#{file_id}#{grp_id}")
                     ]]
                 reply_markup=InlineKeyboardMarkup(button)
                 msg = await client.send_cached_media(
