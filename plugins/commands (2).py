@@ -319,31 +319,31 @@ async def start(client, message):
                     file_size = get_size(files1.file_size),
                     file_caption=files1.caption
                 )
-                 if not await db.has_premium_access(message.from_user.id):
-                     limit = settings.get("all_limit", SEND_ALL_LIMITE)
-                     if settings.get("filelock", LIMIT_MODE):
-                         await db.update_files(message.from_user.id, "send_all", send_count + 1)
-                         files_count=await db.files_count(message.from_user.id, "send_all")
-                         f_caption += f"<b>\n\nAʟʟ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/{limit}</b>"
-                         if send_count is not None and send_count >= limit:
-                             buttons = [[
-                                        InlineKeyboardButton('🥺 Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🥺', callback_data=f'premium_info')
-                                       ]]
-                             reply_markup = InlineKeyboardMarkup(buttons)
-                             return await message.reply_text(script.BUTTON_LIMIT, 
-                             reply_markup=reply_markup)
-                 button = [[
-                     InlineKeyboardButton("😌 ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ ❤️‍🔥", callback_data=f"streaming#{file_id}#{grp_id}")
-                     ]]
-                 reply_markup=InlineKeyboardMarkup(button)
-                 msg = await client.send_cached_media(
-                     chat_id=message.from_user.id,
-                     file_id=file_id,
-                     caption=f_caption,
-                     protect_content=True if pre == 'filep' else False,
-                     reply_markup=reply_markup
-                 )
-               filesarr.append(msg)
+                if not await db.has_premium_access(message.from_user.id):
+                    limit = settings.get("all_limit", SEND_ALL_LIMITE)
+                    if settings.get("filelock", LIMIT_MODE):
+                        await db.update_files(message.from_user.id, "send_all", send_count + 1)
+                        files_count=await db.files_count(message.from_user.id, "send_all")
+                        f_caption += f"<b>\n\nAʟʟ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/{limit}</b>"
+                        if send_count is not None and send_count >= limit:
+                            buttons = [[
+                                       InlineKeyboardButton('✨ Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ ✨', callback_data=f'premium_info')
+                                      ]]
+                            reply_markup = InlineKeyboardMarkup(buttons)
+                            return await message.reply_text(script.BUTTON_LIMIT, 
+                            reply_markup=reply_markup)
+                button = [[
+                    InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}#{grp_id}")
+                    ]]
+                reply_markup=InlineKeyboardMarkup(button)
+                msg = await client.send_cached_media(
+                    chat_id=message.from_user.id,
+                    file_id=file_id,
+                    caption=f_caption,
+                    protect_content=True if pre == 'filep' else False,
+                    reply_markup=reply_markup
+                )
+                filesarr.append(msg)
             if await db.get_setting("AUTO_FILE_DELETE", default=AUTO_FILE_DELETE):
                 k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
                 await asyncio.sleep(3000)
