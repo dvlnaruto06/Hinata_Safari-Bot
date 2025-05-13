@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """<b><i>ʜᴇʏ 😎</i></b> {},
 <b><blockquote>Iᴍ Tʜᴇ Mᴏsᴛ Aᴅᴠᴀɴᴄᴇ Aɪ Pᴏᴡᴇʀed full Bᴏᴛ.🥰
-Mujhe sirf movies, series, anime, kdrama, etc ke sirf name batao or fir dekho 😎.</b></blockquote>
+Jᴜꜱᴛ Sᴇɴᴅ Mᴇ Aɴʏ Mᴏᴠɪᴇꜱ, Sᴇʀɪᴇꜱ, anime & kdrama, etcs ke sirf name batao or fir dekho.</b></blockquote>
 
 <b><spoiler>🍁 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 🍁- <a href=https://t.me/moviehub4u_update>M◍viε⁠ ｡Hᴗ⁠b ｡4U</b></spoiler></a>"""
     
