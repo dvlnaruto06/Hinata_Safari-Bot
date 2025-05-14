@@ -1250,7 +1250,6 @@ async def set_mode(client, message):
         await message.reply(f"An error occurred: {e}")
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from database import db  # Agar upar already hai to is line ko hata sakte ho
 
 @Client.on_message(filters.command("verify") & filters.group)
 async def verify_group(bot, message: Message):
