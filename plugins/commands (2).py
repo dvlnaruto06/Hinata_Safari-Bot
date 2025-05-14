@@ -1248,3 +1248,22 @@ async def set_mode(client, message):
             await message.reply("Please specify the mode name and 'True' or 'False' as arguments. Example: /set_value PM_FILTER True")
     except Exception as e:
         await message.reply(f"An error occurred: {e}")
+from pyrogram import Client, filters
+from pyrogram.types import Message
+from database import db  # Agar upar already hai to is line ko hata sakte ho
+
+@Client.on_message(filters.command("verify") & filters.group)
+async def verify_group(bot, message: Message):
+    chat_id = message.chat.id
+    user = await bot.get_chat_member(chat_id, message.from_user.id)
+
+    if user.status not in ("administrator", "creator"):
+        return await message.reply_text("🚫 Only admins can verify this group.")
+
+    is_verified = await db.check_group_verification(chat_id)
+
+    if is_verified:
+        return await message.reply_text("✅ This group is already verified!")
+
+    await db.verify_group(chat_id)
+    await message.reply_text("✅ Group has been successfully verified.")
